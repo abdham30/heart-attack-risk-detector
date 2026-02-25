@@ -48,41 +48,13 @@ npm run dev        # Starts on http://localhost:3000
 
 ---
 
-## API
-
-### POST `/api/assess-risk`
-
-**Request Body:**
-```json
-{
-  "age": 52,
-  "sex": "male",
-  "hasHypertension": true,
-  "systolicBP": 148,
-  "hasHighCholesterol": false,
-  "hasDiabetes": false,
-  "familyHistory": true,
-  "smokingStatus": "former",
-  "alcoholFrequency": "moderate",
   "exerciseDaysPerWeek": 2,
   "heightCm": 175,
   "weightKg": 88,
   "dietQuality": "average",
   "stressLevel": "high"
 }
-```
 
-**Response:**
-```json
-{
-  "score": 42,
-  "category": "High",
-  "bmi": 28.7,
-  "breakdown": [
-    { "factor": "Age", "condition": "45–54", "points": 8 },
-    { "factor": "Hypertension", "condition": "Diagnosed Yes", "points": 12 },
-    ...
-  ],
   "recommendations": [
     "💊 If you have high blood pressure, work with your doctor...",
     ...
@@ -108,11 +80,3 @@ npm run dev        # Starts on http://localhost:3000
 This tool is for **awareness purposes only** and does not constitute medical advice. It uses a simplified rule-based model and is not validated for clinical use. Always consult a qualified physician.
 
 ---
-
-## Extending Later
-
-- Add MongoDB to persist anonymized aggregate stats
-- Add user accounts and tracking over time
-- Integrate real clinical risk calculators (Framingham, ASCVD)
-- Build a React Native mobile app
-- Add AI-generated personalized guidance
