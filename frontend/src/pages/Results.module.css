@@ -1,0 +1,181 @@
+.page { min-height: 100vh; background: var(--bg); padding-bottom: 80px; }
+
+/* ── HEADER ── */
+.header {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 40px;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  box-shadow: 0 1px 8px rgba(26,37,53,0.06);
+}
+.headerLeft { display: flex; align-items: center; gap: 14px; }
+.backBtn {
+  background: none; border: 1px solid var(--border);
+  color: var(--text-muted); padding: 8px 16px;
+  border-radius: var(--radius-sm); font-size: 13px;
+  cursor: pointer; font-family: var(--sans);
+  transition: all 0.2s; flex-shrink: 0;
+}
+.backBtn:hover { color: var(--text); border-color: var(--accent); }
+.headerTitle { font-size: 15px; font-weight: 600; color: var(--text); }
+.headerSub   { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+/* ── BODY ── */
+.body { max-width: 780px; margin: 0 auto; padding: 44px 40px 40px; }
+
+/* ── SCORE CARD ── */
+.scoreCard {
+  border: 1.5px solid;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.scoreDisplay {
+  display: flex; align-items: center; gap: 32px;
+  margin-bottom: 32px;
+}
+.scoreMeta {}
+.scoreCategory {
+  font-family: var(--serif);
+  font-size: 34px; font-weight: 700; margin-bottom: 10px;
+  line-height: 1.1;
+}
+.scoreTagline {
+  font-size: 15px; line-height: 1.7;
+  color: var(--text-muted); max-width: 420px;
+}
+
+/* Interpretation box */
+.interpretation {
+  border: 1px solid;
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.interpretLabel {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.interpretText { font-size: 14px; line-height: 1.75; color: var(--text-muted); }
+
+/* Urgency */
+.urgency {
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Risk scale */
+.riskScale {
+  display: flex; gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.riskBand {
+  flex: 1; padding: 10px 6px; text-align: center;
+  border: 2px solid transparent;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+  transition: all 0.2s;
+}
+.riskBandActive { border-radius: var(--radius-sm); }
+.riskBandRange { font-family: var(--serif); font-size: 12px; font-weight: 700; }
+.riskBandLabel { font-size: 10px; line-height: 1.3; font-weight: 500; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.cardTitle {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cardTitle::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+/* Recommendations */
+.recsList { display: flex; flex-direction: column; gap: 10px; }
+.recItem {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s;
+}
+.recItem:hover { border-color: var(--border2); }
+.recIcon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.recText { font-size: 14px; line-height: 1.7; color: var(--text-muted); }
+
+/* Breakdown */
+.breakdown { display: flex; flex-direction: column; gap: 0; }
+.breakdownRow {
+  display: flex; align-items: center;
+  padding: 9px 12px; border-radius: var(--radius-sm);
+  font-size: 13px; gap: 8px;
+}
+.bdFactor { color: var(--text-muted); flex: 0 0 40%; }
+.bdValue  { color: var(--text); flex: 1; }
+.bdPts    { font-weight: 700; min-width: 44px; text-align: right; }
+.ptsPos   { color: #ea580c; }
+.ptsNeg   { color: #059669; }
+.ptsZero  { color: var(--text-dim); }
+
+.breakdownTotal {
+  display: flex; align-items: center;
+  padding: 12px 12px; border-top: 1.5px solid var(--border);
+  margin-top: 6px; gap: 8px;
+}
+.bdPtsTotal {
+  font-family: var(--serif); font-size: 18px;
+  font-weight: 700; color: var(--text);
+  min-width: 44px; text-align: right;
+}
+
+/* Disclaimer */
+.disclaimerNote {
+  text-align: center;
+  font-size: 12px; color: var(--text-dim);
+  line-height: 1.8; padding: 16px;
+}
+
+/* Retake */
+.retakeBtn {
+  width: 100%; background: var(--surface);
+  border: 1.5px solid var(--border2);
+  color: var(--text-muted);
+  padding: 14px; border-radius: var(--radius-md);
+  font-family: var(--sans); font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.retakeBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 768px) {
+  .header { padding: 14px 20px; }
+  .body   { padding: 28px 20px 40px; }
+  .scoreCard { padding: 24px 20px; }
+  .scoreDisplay { flex-direction: column; text-align: center; }
+  .scoreTagline { max-width: 100%; }
+  .riskBand { padding: 8px 2px; }
+  .riskBandRange { font-size: 10px; }
+  .riskBandLabel { font-size: 9px; }
+  .card { padding: 22px 18px; }
+  .bdFactor { flex: 0 0 36%; }
+}
