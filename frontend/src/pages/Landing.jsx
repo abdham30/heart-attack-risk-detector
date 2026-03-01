@@ -40,10 +40,16 @@ export default function Landing() {
             in less than 5 Minutes
           </h1>
           <p className={styles.heroSub}>
+<<<<<<< HEAD
             A smart lifestyle check for your heart.
             It reviews your habits, highlights what might be
             harming your heart, and guides you with easy
             action plans to stay healthy.
+=======
+            A structured, lifestyle-based cardiovascular risk awareness tool built using
+            recognised health risk factors. Get a clear risk estimate and practical guidance
+            — quickly and responsibly.
+>>>>>>> 128b220ed2b32184aec5091bcb1e5e1a9ed14b94
           </p>
           <div className={styles.heroActions}>
             <button className={`btn-primary ${styles.heroCta}`} onClick={() => navigate('/assessment')}>
