@@ -139,10 +139,6 @@ cd frontend && npm install && npm run dev
   "family": "no",
   "prevHeart": "no"
 }
-<<<<<<< HEAD
-```
-=======
->>>>>>> 128b220ed2b32184aec5091bcb1e5e1a9ed14b94
 
 **Response:**
 ```json
@@ -199,11 +195,6 @@ VITE_APP_NAME=Heart Risk
 | PDF export | Add `pdfkit` to backend |
 
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 128b220ed2b32184aec5091bcb1e5e1a9ed14b94
 
 ## ⚠️ Disclaimer
 
@@ -212,7 +203,4 @@ Not a validated clinical prediction tool.
 No data is stored. Always consult a healthcare professional.
 
 © 2026 Heart Risk Awareness Project
-<<<<<<< HEAD
-=======
->>>>>>> 5773b22 (Landing page and improved UI structure)
->>>>>>> 128b220ed2b32184aec5091bcb1e5e1a9ed14b94
+
